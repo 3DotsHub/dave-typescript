@@ -31,10 +31,10 @@ export class DaemonModule {
 
 		this.socket.bind(this.bindingPort);
 
-		this.getPeers();
+		// this.getPeers();
 	}
 
-	@Interval(10000)
+	// @Interval(10000)
 	getPeers() {
 		const payload = Buffer.from('0x00', 'hex');
 		bootstrapV0.forEach((host) => this.socket.send(payload, host.port, host.address));
