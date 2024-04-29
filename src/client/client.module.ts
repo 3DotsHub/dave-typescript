@@ -20,7 +20,7 @@ export class ClientModule {
 		});
 	}
 
-	@Interval(3000)
+	// @Interval(3000)
 	workflow() {
 		this.send('Hello');
 	}
